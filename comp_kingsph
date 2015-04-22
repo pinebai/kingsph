@@ -1,0 +1,10 @@
+#!/bin/bash
+
+## This script compiles the kingsph code ##
+###########################################
+
+# Remove old output files
+rm ./output/*.out
+
+gfortran *.f -o kingsph
+
