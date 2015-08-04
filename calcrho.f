@@ -12,7 +12,7 @@ c		loop over near neighbours
 				rij(l) = r(l,i)-r(l,j)
 			end do
 			mrij = sqrt(rij(1)**2 + rij(2)**2 + rij(3)**2)
-			call kfunc(mrij,h(i),w)
+			call kfunc(mrij,h(i),dims,w)
 			rho(i) = rho(i) + m(j)*w
 		end do
 	end do

@@ -4,6 +4,7 @@
 	real dx,dy,dz,x,y,z,radius,rcomp_max
 c	set counters and number particles (to go in setup/param 
 c	file in due course).
+	dims=2
 	ntmax = 200
 	crn=60  !sqr root of the TOTAL number
 	nbound=10

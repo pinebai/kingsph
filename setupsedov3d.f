@@ -4,6 +4,7 @@
 	real dx,dy,dz,x,y,z,radius
 c	set counters and number particles (to go in setup/param 
 c	file in due course).
+	dims=3
 	ntmax = 60
 	crn=25  !cube root of the TOTAL number
 	n = (crn-5)**3  !we need 2.5 particles each side for bcs
