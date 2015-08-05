@@ -12,13 +12,14 @@ c	particle properties
 	COMMON / part_props /
      +		r,m,v,u,h,gm,pc,dh,v0,u0,r0,c
 c	smoothed properties...
-	double precision rho(nmax),p(nmax)
+	double precision rho(nmax),p(nmax),omega(nmax)
 	COMMON / smoothed_props /
-     +		rho,p
+     +		rho,p,omega
 c	particle property time derivatives
-	double precision dvdt(3,nmax),dudt(nmax),dhdt(nmax)
+	double precision dvdt(3,nmax),dudt(nmax),dhdt(nmax),
+     +		drhodt(nmax)
 	COMMON / derivs /
-     +		dvdt,dudt,dhdt
+     +		dvdt,dudt,dhdt,drhodt
 c	neighbourlists
 	INTEGER nneigh(nmax),neigh_list(nmax,100)
 	COMMON / neighbourlists /

@@ -69,7 +69,7 @@ c	right state ghost nodes for boundary
 		m(i) = 0.00125
 		gm(i) = 1.4
 		pc(i) = 0.0
-		u(i) = 1.0/(gm(i)-1.0)
+		u(i) = (0.1/0.125)/(gm(i)-1.0)
 		h(i) = 0.008
 	end do
 	return

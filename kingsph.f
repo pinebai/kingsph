@@ -5,12 +5,11 @@
 	double precision radius
 c	set intitial conditions. Call "setupsod" or "setupsedov3d"
 	dmpfrq = 1
-!	call setupsod
-	call setupvort2d
+	call setupsod
+!	call setupvort2d
+!	call setupsedov3d
 c	supplementary setup bits...
-	call neighbours
-	call calcrho
-	call calcp
+	call calcsmooth
 	!call bound
 c	just in case we want to find maxval(array)...
 	do i=1,n
@@ -30,9 +29,7 @@ c	TIME LOOP
 		call evol
 		t = t+dt
 		write(6,*) nt,t,dt
-		call neighbours
-		call calcrho
-		call calcp
+		call calcsmooth
 		call bound
 	end do
 C	---------------------------------------------------------------
