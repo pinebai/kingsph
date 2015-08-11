@@ -3,7 +3,7 @@
 c	set time counters and number particles (to go in setup/param 
 c	file in due course).
 	dims=1
-	ntmax = 90
+	ntmax = 400
 	n = 450
 	nsh = 400
 	ng = 100
@@ -22,7 +22,7 @@ c	left state
 		gm(i) = 1.4
 		pc(i) = 0.0
 		u(i) = 1.0/(gm(i)-1.0)
-		h(i) = 0.008
+		h(i) = 0.00168
 	end do
 c	right state
 	do i=nsh+1,n
@@ -36,7 +36,7 @@ c	right state
 		gm(i) = 1.4
 		pc(i) = 0.0
 		u(i) = (0.1/0.125)/(gm(i)-1.0)
-		h(i) = 0.008
+		h(i) = 0.01345
 	end do
 c	left state ghost nodes for boundary
 	do i=n+1,n+ng/2
@@ -53,7 +53,7 @@ c	left state ghost nodes for boundary
 		gm(i) = 1.4
 		pc(i) = 0.0
 		u(i) = 1.0/(gm(i)-1.0)
-		h(i) = 0.008
+		h(i) = 0.00168
 	end do
 c	right state ghost nodes for boundary
 	do i=n+ng/2 + 1,n+ng
@@ -70,7 +70,7 @@ c	right state ghost nodes for boundary
 		gm(i) = 1.4
 		pc(i) = 0.0
 		u(i) = (0.1/0.125)/(gm(i)-1.0)
-		h(i) = 0.008
+		h(i) = 0.01345
 	end do
 	return
 	end

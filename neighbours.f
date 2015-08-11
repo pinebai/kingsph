@@ -9,7 +9,7 @@ c	this isn't a very efficient way of doing things...
 				rij(l) = r(l,i)-r(l,j)
 			end do
 			mrij = sqrt(rij(1)**2 + rij(2)**2 + rij(3)**2)
-			if (mrij.le. 2.1*h(i))then
+			if (mrij.le. 2.1*h(i).or.mrij.le.2.1*h(j))then
 				nneigh(i) = nneigh(i) + 1
 				neigh_list(i,nneigh(i)) = j
 			end if	

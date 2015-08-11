@@ -36,18 +36,20 @@ c			find vsig and the artificial viscosity terms
 			end if
 			phiij = hij*vdotr/(mrij**2+0.01*hij*2)
 			avij = (aav*cij*phiij + bav*phiij**2.0)/rhoij
-			avij = 1d-2*avij ! change artificial viscosity
 c			find the gradient of the kernel function
-			call dkfunc(mrij,hij,dims,dw)
+			call dkfunc(mrij,h(i),dims,dwi)
+			call dkfunc(mrij,h(j),dims,dwj)
+			dw = 0.5*(dwi+dwj)
 c			augment the forces and rate of change of energy
 			do l=1,3
 				dvdt(l,i) = dvdt(l,i) - m(j)*
-     +				((p(i)/rho(i)**2.0) + 
-     +				(p(j)/rho(j)**2.0) + avij)*
-     +				(rij(l)/max(mrij,1e-6))*dw
+     +				(rij(l)/max(mrij,1e-6))*
+     +				((dwi*p(i)/(omega(i)*rho(i)**2.0)) + 
+     +				(dwj*p(j)/(omega(j)*rho(j)**2.0)) + 
+     +				avij*dw)
 			end do
-			dudt(i) = dudt(i) + (p(i)/rho(i)**2.0)*m(j)*
-     +				vdotr*dw/max(mrij,1e-6)
+			dudt(i)=dudt(i)+(p(i)/(omega(i)*rho(i)**2.0))
+     +				*m(j)*vdotr*dwi/max(mrij,1e-6)
 		end do
 	end do
 	return
