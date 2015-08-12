@@ -3,6 +3,7 @@
 c	set time counters and number particles (to go in setup/param 
 c	file in due course).
 	dims=1
+	eta = 1.3
 	ntmax = 500
 	n = 450
 	nsh = 400

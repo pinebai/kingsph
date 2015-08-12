@@ -20,6 +20,7 @@ c	predictor step
 		u(i) = u0(i) + 0.5*dt*dudt(i)
 	end do
 c	recalculate rho,p
+	call bound
 	call calcsmooth
 c	find some more derivatives
 	call calcddt

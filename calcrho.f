@@ -26,8 +26,9 @@ c		loop over near neighbours
 			call dkfunc(mrij,h(i),dims,dw)
 			omega(i) = omega(i)-m(j)*dw*mrij/(dims*rho(i))
 		end do
-!omega(i)=omega(i)+1.0d0  !why does this give "WRONG" results??!
-		omega(i)=1.0d0
+		omega(i)=omega(i)+1.0d0
+!       why does this give "WRONG" results??!
+	!	omega(i)=1.0d0
 	end do
 	return
 	end

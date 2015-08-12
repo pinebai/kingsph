@@ -2,9 +2,9 @@
 
 c	particle and time step counters...
 	INTEGER n,nt,ntmax,nsh,ng,dims
-	double precision dt,t,rlow(3),rhigh(3)
+	double precision dt,t,rlow(3),rhigh(3),eta
 	COMMON / counters /
-     +		dt,t,rlow,rhigh,n,nt,ntmax,nsh,ng,dims
+     +		dt,t,rlow,rhigh,eta,n,nt,ntmax,nsh,ng,dims
 c	particle properties
 	double precision r(3,nmax),m(nmax),v(3,nmax),u(nmax),h(nmax),
      +		gm(nmax),pc(nmax),dh(nmax),v0(3,nmax),u0(nmax),
@@ -16,12 +16,12 @@ c	smoothed properties...
 	COMMON / smoothed_props /
      +		rho,p,omega
 c	particle property time derivatives
-	double precision dvdt(3,nmax),dudt(nmax),dhdt(nmax),
+	double precision dvdt(3,nmax),dudt(nmax),
      +		drhodt(nmax)
 	COMMON / derivs /
-     +		dvdt,dudt,dhdt,drhodt
+     +		dvdt,dudt,drhodt
 c	neighbourlists
-	INTEGER nneigh(nmax),neigh_list(nmax,200)
+	INTEGER nneigh(nmax),neigh_list(nmax,nmax)
 	COMMON / neighbourlists /
      +		nneigh,neigh_list
 c	mask

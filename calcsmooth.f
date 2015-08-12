@@ -2,17 +2,17 @@
 	include "commonblock"
 	integer n_upd,upd_list(nmax)
 	logical brk
-	double precision h_err(nmax),zeta,eta,h_old,dzeta
+	double precision h_err(nmax),zeta,h_old,dzeta
 	call neighbours
 	call calcrho
 c	initial guess...
-	eta = 1.5
 	n_upd=n
 	brk=.false.
 	do i=1,n_upd
 	   upd_list(i)=i
 	end do
 	do while (brk.eqv..false.)
+!	   write(6,*) h(320),nneigh(320)
 	   do j=1,n_upd
 	      i=upd_list(j)
 	      h_old=h(i)

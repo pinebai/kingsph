@@ -5,6 +5,7 @@
 c	set counters and number particles (to go in setup/param 
 c	file in due course).
 	dims=3
+	eta = 0.1 !?? check!
 	ntmax = 60
 	crn=25  !cube root of the TOTAL number
 	n = (crn-5)**3  !we need 2.5 particles each side for bcs

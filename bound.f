@@ -1,6 +1,20 @@
 	subroutine bound
 	include "commonblock"
 	integer nbp
+c       firstly, check particles left domain, and put back in
+c       something wrong, not bouncy enough!
+	do k=1,dims
+	   do i=1,n
+	      if(r(k,i).lt.rlow(k))then
+		 r(k,i)=rlow(k)+(rlow(k)-r(k,i))
+		 v(k,i)=-1.0*v(k,i)
+	      end if
+	      if(r(k,i).gt.rhigh(k))then
+		 r(k,i)=rhigh(k)-(r(k,i)-rhigh(k))
+		 v(k,i)=-1.0*v(k,i)
+	      end if
+	   end do
+	end do
 c       for every particle, see if it is within 3h of the boundary
 	nbp = 0
 	do k=1,dims  !for each dimension
