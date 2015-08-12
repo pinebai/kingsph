@@ -11,7 +11,7 @@ c	set intitial conditions. Call "setupsod" or "setupsedov3d"
 !	call setupsedov3d
 c	supplementary setup bits...
 	call calcsmooth
-	!call bound
+	call bound
 c	just in case we want to find maxval(array)...
 	do i=1,n
 		propmask(i) = .true.

@@ -6,7 +6,7 @@
 	call neighbours
 	call calcrho
 c	initial guess...
-	eta = 1.35
+	eta = 1.5
 	n_upd=n
 	brk=.false.
 	do i=1,n_upd

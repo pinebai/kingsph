@@ -3,16 +3,20 @@
 c	set time counters and number particles (to go in setup/param 
 c	file in due course).
 	dims=1
-	ntmax = 400
+	ntmax = 500
 	n = 450
 	nsh = 400
 	ng = 100
-	rbl = 0.0
-	rbr = 1.005
+	rlow(1) = 0.0d0
+	rhigh(1) = 1.005d0
+	rlow(2)=0.0d0
+	rhigh(2)=0.0d0
+	rlow(3)=0.0d0
+	rhigh(3)=0.0d0
 c	set up initial particle properties...
 c	left state
 	do i=1,nsh
-		r(1,i) = 0.000625 + 0.00125*(i-1)
+		r(1,i) = 1.25d-3*(i-1)+6.25d-4
 		r(2,i) = 0.0
 		r(3,i) = 0.0
 		do l=1,3
@@ -37,40 +41,7 @@ c	right state
 		pc(i) = 0.0
 		u(i) = (0.1/0.125)/(gm(i)-1.0)
 		h(i) = 0.01345
-	end do
-c	left state ghost nodes for boundary
-	do i=n+1,n+ng/2
-		j=i-n
-		r(1,i) = -0.000625 - 0.00125*(j-1)
-		r(2,i) = 0.0
-		r(3,i) = 0.0
-		do l=1,3
-			v(l,i) = 0.0
-		end do
-		rho(i) = 1.0
-		p(i) = 1.0
-		m(i) = 0.00125
-		gm(i) = 1.4
-		pc(i) = 0.0
-		u(i) = 1.0/(gm(i)-1.0)
-		h(i) = 0.00168
-	end do
-c	right state ghost nodes for boundary
-	do i=n+ng/2 + 1,n+ng
-		j=i-(n+ng/2)
-		r(1,i) = 1.0 + 0.01*j
-		r(2,i) = 0.0
-		r(3,i) = 0.0
-		do l=1,3
-			v(l,i) = 0.0
-		end do
-		rho(i) = 0.125
-		p(i) = 0.1
-		m(i) = 0.00125
-		gm(i) = 1.4
-		pc(i) = 0.0
-		u(i) = (0.1/0.125)/(gm(i)-1.0)
-		h(i) = 0.01345
-	end do
+        end do
+	call bound
 	return
 	end
