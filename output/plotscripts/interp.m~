@@ -1,5 +1,0 @@
-% This is a function to interpolate the density.
-% lets just assume m=1 for now!!
-function P_xy=interp(A,X,Y,P,H)
-P_xy=1;
-endfunction
