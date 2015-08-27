@@ -25,3 +25,5 @@ Bugs and so on:
 
 ![alt text] (https://github.com/jrcking/kingsph/tron.jpg "sample output")
 
+https://github.com/jrcking/kingsph/blob/master/tron.jpg?raw=true
+
