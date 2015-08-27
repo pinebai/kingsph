@@ -23,7 +23,5 @@ Bugs and so on:
   * It's a bit coordinate affected...
   * Implement w.
 
-![alt text] (https://github.com/jrcking/kingsph/tron.jpg "sample output")
-
-https://github.com/jrcking/kingsph/blob/master/tron.jpg?raw=true
+![alt text](https://github.com/jrcking/kingsph/blob/master/tron.jpg?raw=true "sample output")
 
