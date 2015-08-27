@@ -1,15 +1,15 @@
 	subroutine bound
 	include "commonblock"
 	integer nbp
-c       firstly, check particles left domain, and put back in
+c       firstly, check particle outside domain, put back in
 c       something wrong, not bouncy enough!
 	do k=1,dims
 	   do i=1,n
-	      if(r(k,i).lt.rlow(k))then
+	      if(r(k,i).lt.rlow(k))then !low bound
 		 r(k,i)=rlow(k)+(rlow(k)-r(k,i))
 		 v(k,i)=-1.0*v(k,i)
 	      end if
-	      if(r(k,i).gt.rhigh(k))then
+	      if(r(k,i).gt.rhigh(k))then !high bound
 		 r(k,i)=rhigh(k)-(r(k,i)-rhigh(k))
 		 v(k,i)=-1.0*v(k,i)
 	      end if

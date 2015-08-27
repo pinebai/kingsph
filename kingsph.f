@@ -6,8 +6,8 @@
 c	set intitial conditions. Call "setupsod" or "setupsedov3d"
 	dmpfrq = 1
 !	call setupsod
-!	call setupvort2d
-	call setupsedov2d
+	call setupvort2d
+!	call setupsedov2d
 !	call setupsedov3d
 c	supplementary setup bits...
 	call calcsmooth
