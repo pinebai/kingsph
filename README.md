@@ -3,10 +3,10 @@
 This is my toy SPH code. The heart of it is "based" on this: http://www.arxiv.org/abs/1012.1885 paper by Price, and his Ph.D. thesis.
 
 Different subroutines for initial conditions for:
-a. 1d sod;
-b. 2d sedov;
-c. 3d sedov;
-d. 2d something;
+  * 1d sod;
+  * 2d sedov;
+  * 3d sedov;
+  * 2d something;
 
 Features:
 a. Cubic kernel;
