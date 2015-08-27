@@ -9,14 +9,19 @@ Different subroutines for initial conditions for:
   * 2d something;
 
 Features:
-a. Cubic kernel;
-b. Leap-frog time integration;
-c. Variable smoothing lengths;
-d. Box shaped domain;
-e. 'Wall' boundary conditions;
+  * Cubic kernel;
+  * Leap-frog time integration;
+  * Variable smoothing lengths;
+  * Box shaped domain;
+  * 'Wall' boundary conditions;
+  * Some Octave scripts to interpolate results to grid and plot.
 
 Bugs and so on:
-a. Why does \Omega\ne 1.0 cause the wrong results?;
-b. 1d Sod - requires smoothing of initial conditions;
-c. Create some inflow/outflow boundary conditions;
-d. Implement w.
+  * Why does \Omega\ne 1.0 cause the wrong results?;
+  * 1d Sod - requires smoothing of initial conditions;
+  * Create some inflow/outflow boundary conditions;
+  * It's a bit coordinate affected...
+  * Implement w.
+
+![alt text] (https://github.com/jrcking/kingsph/tron.jpg "sample output")
+
