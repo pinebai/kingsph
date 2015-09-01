@@ -20,7 +20,7 @@ Bugs and so on:
   * Why does \Omega\ne 1.0 cause the wrong results?;
   * 1d Sod - requires smoothing of initial conditions;
   * Create some inflow/outflow boundary conditions;
-  * It's a bit coordinate affected...
+  * Should have isometric arrangement to start with;
   * Implement w.
 
 ![alt text](https://raw.githubusercontent.com/jrcking/kingsph/master/img/tron.jpg  "Sedov explosion particle positions")

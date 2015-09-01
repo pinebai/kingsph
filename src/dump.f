@@ -12,6 +12,7 @@ c	write the outputs to a file...
 	open(unit=13,file="./output/p"//tron//".out")
 	open(unit=14,file="./output/h"//tron//".out")
 	open(unit=15,file="./output/nneigh"//tron//".out")
+	open(unit=16,file="./output/m"//tron//".out")
 	do i=1,n!+ng
 		radius = sqrt(r(1,i)**2+r(2,i)**2+r(3,i)**2)
 		vmag = sqrt(v(1,i)**2+v(2,i)**2+v(3,i)**2)
@@ -22,8 +23,9 @@ c	write the outputs to a file...
 		write(13,*) radius,p(i)	
 		write(14,*) radius,h(i)
 		write(15,*) radius,nneigh(i)
+		write(16,*) radius,m(i)
 	end do
-	do i=9,15
+	do i=9,16
 		close(i)
 	end do
 	return

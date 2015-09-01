@@ -1,11 +1,12 @@
 % this is a script to bundle the functions together.
 % temporary...
-function temp_run(n,prop)
+function temp_run(n,PROP)
 
-[r rho h]=load_r(n,prop);
+[r prop h rho m]=load_r(n,PROP);
 [x y]=grid_gen(r);
-prop_xy=interp(r,x,y,rho,h);
+pp=m.*prop./rho;
+prop_xy=interp(r,x,y,pp,h);
 colormap('hot')
 surf(x,y,prop_xy);shading interp;view([0 90])
-xlabel('x');ylabel('y');colorbar;
+xlabel('x');ylabel('y');title(PROP);colorbar;
 endfunction
