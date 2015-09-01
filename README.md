@@ -23,7 +23,7 @@ Bugs and so on:
   * It's a bit coordinate affected...
   * Implement w.
 
-![alt text](https://github.com/jrcking/kingsph/img/blob/master/tron.jpg?raw=true "Sedov explosion particle positions")
+![alt text](https://raw.githubusercontent.com/jrcking/kingsph/master/img/tron.jpg  "Sedov explosion particle positions")
 
-![alt text](https://github.com/jrcking/kingsph/img/blob/master/tron2.jpg?raw=true "Sedov explosion viewed the proper way!")
+![alt text](https://raw.githubusercontent.com/jrcking/kingsph/master/img/tron2.jpg  "Sedov explosion viewed the proper way!")
 
