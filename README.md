@@ -1,6 +1,6 @@
 # kingsph
 
-This is my toy SPH code. The heart of it is "based" on this: http://www.arxiv.org/abs/1012.1885 paper by Price, and his Ph.D. thesis.
+This is my toy SPH code. It contains nothing novel, and is based on what I've read in the major papers on the subject.
 
 Different subroutines for initial conditions for:
   * 1d sod;
