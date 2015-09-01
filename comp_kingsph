@@ -6,5 +6,5 @@
 # Remove old output files
 rm ./output/*.out
 
-gfortran *.f -o kingsph
+gfortran ./src/*.f -o kingsph
 
