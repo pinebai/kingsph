@@ -37,7 +37,7 @@ c		create some integers in base crn and crn**2
 		gm(i) = 1.4d0
 		pc(i) = 0d3
 !		radius = sqrt(r(1,i)**2+r(2,i)**2+r(3,i)**2)
-		if (i.eq.363)then ! hot in the middle
+		if (i.eq.363)then !!! 363 middle! hot in the middle
 		   u(i) = 2.5d0
 		else ! cooler outside
 		   u(i) = 2.5d-5
